@@ -1,25 +1,128 @@
-/* style.css */
-body {
-    font-family: Arial, sans-serif;
+/* Reset browser defaults */
+* {
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
 }
 
 header {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 1rem 0;
     text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
     display: flex;
     justify-content: center;
+    list-style: none;
 }
 
-nav li {
-    margin: 0 10px;
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
 section {
-    margin-bottom: 20px;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 0.5rem;
+}
+
+section p, section ul {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+}
+
+section ul {
+    list-style: square;
+    padding-left: 1.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #333;
+    color: #fff;
+}
+
+footer p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+footer ul {
+    display: inline-flex;
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin: 0 0.5rem;
+    font-size: 1rem;
+}
+
+footer ul li::after {
+    content: '|';
+    color: #fff;
+    margin-left: 0.5rem;
+}
+
+footer ul li:last-child::after {
+    content: '';
+    margin-left: 0;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    section h2 {
+        font-size: 1.7rem;
+    }
 }
